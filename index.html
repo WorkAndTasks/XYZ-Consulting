@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>XYZ Consulting</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+        }
+        header {
+            background-color: #007ACC;
+            color: white;
+            padding: 10px 0;
+            text-align: center;
+        }
+        nav {
+            display: flex;
+            justify-content: center;
+            background-color: #005B99;
+        }
+        nav a {
+            padding: 14px 20px;
+            color: white;
+            text-decoration: none;
+            text-align: center;
+        }
+        nav a:hover {
+            background-color: #003F66;
+        }
+        .content {
+            padding: 20px;
+        }
+        .tab-content {
+            display: none;
+            position: relative; /* Positioning for overlay */
+            padding: 20px;
+            color: white;
+            background-size: cover;
+            background-position: center;
+        }
+        .tab-content::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent black overlay */
+            z-index: 1; /* Ensure overlay is below text */
+        }
+        .tab-content h2, .tab-content p, .tab-content ul {
+            position: relative; /* Positioning for text above overlay */
+            z-index: 2; /* Ensure text is above overlay */
+        }
+        .active {
+            display: block;
+        }
+        #home {
+            background-image: url('https://example.com/home-bg.jpg'); /* Replace with actual image URL */
+        }
+        #consulting {
+            background-image: url('https://example.com/consulting-bg.jpg'); /* Replace with actual image URL */
+        }
+        #data-analysis {
+            background-image: url('https://example.com/data-analysis-bg.jpg'); /* Replace with actual image URL */
+        }
+        #financial-planning {
+            background-image: url('https://example.com/financial-planning-bg.jpg'); /* Replace with actual image URL */
+        }
+        #direct-tax {
+            background-image: url('https://example.com/direct-tax-bg.jpg'); /* Replace with actual image URL */
+        }
+        #resources {
+            background-image: url('https://example.com/resources-bg.jpg'); /* Replace with actual image URL */
+        }
+        #contacts {
+            background-image: url('https://example.com/contacts-bg.jpg'); /* Replace with actual image URL */
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>XYZ Consulting</h1>
+</header>
+
+<nav>
+    <a href="#home" onclick="showTab('home')">Home</a>
+    <a href="#consulting" onclick="showTab('consulting')">Business Consulting</a>
+    <a href="#data-analysis" onclick="showTab('data-analysis')">Data Analysis</a>
+    <a href="#financial-planning" onclick="showTab('financial-planning')">Financial Planning</a>
+    <a href="#direct-tax" onclick="showTab('direct-tax')">Direct Tax</a>
+    <a href="#resources" onclick="showTab('resources')">Resources</a>
+    <a href="#contacts" onclick="showTab('contacts')">Contacts</a>
+</nav>
+
+<div class="content">
+    <div id="home" class="tab-content active">
+        <h2>Welcome to XYZ Consulting</h2>
+        <p>Explore our services in Business Consulting, Data Analysis, Financial Planning, and Direct Tax.</p>
+        <h3>Quick Links:</h3>
+        <ul>
+            <li><a href="#consulting" onclick="showTab('consulting')" style="color:white;">Business Consulting</a></li>
+            <li><a href="#data-analysis" onclick="showTab('data-analysis')" style="color:white;">Data Analysis</a></li>
+            <li><a href="#financial-planning" onclick="showTab('financial-planning')" style="color:white;">Financial Planning</a></li>
+            <li><a href="#direct-tax" onclick="showTab('direct-tax')" style="color:white;">Direct Tax</a></li>
+            <li><a href="#resources" onclick="showTab('resources')" style="color:white;">Resources</a></li>
+            <li><a href="#contacts" onclick="showTab('contacts')" style="color:white;">Contacts</a></li>
+        </ul>
+    </div>
+
+    <div id="consulting" class="tab-content">
+        <h2>Business Consulting</h2>
+        <p>Our business consulting services help organizations improve their performance and efficiency. We work closely with clients to understand their unique challenges and develop tailored solutions. Our offerings include:</p>
+        
+        <ul>
+            <li><strong>Strategic Planning:</strong> Aligning your business objectives with actionable strategies.</li>
+            <li><strong>Process Improvement:</strong> Analyzing and optimizing business processes for better efficiency.</li>
+            <li><strong>Change Management:</strong> Guiding organizations through transitions and transformations.</li>
+            <li><strong>Market Research:</strong> Conducting in-depth analyses to identify market trends and opportunities.</li>
+            <li><strong>Risk Management:</strong> Identifying potential risks and developing mitigation strategies.</li>
+            <li><strong>Performance Metrics:</strong> Establishing KPIs to measure success and drive improvement.</li>
+        </ul>
+
+    </div>
+
+    <div id="data-analysis" class="tab-content">
+        <h2>Data Analysis</h2>
+        <p>We specialize in transforming raw data into actionable insights that drive business decisions. Our data analysis services include:</p>
+
+        <ul>
+            <li><strong>Data Visualization:</strong> Creating intuitive dashboards and reports for easy interpretation of data.</li>
+            <li><strong>Statistical Analysis:</strong> Applying statistical techniques to uncover patterns and trends.</li>
+            <li><strong>Predictive Modeling:</strong> Using historical data to forecast future outcomes and trends.</li>
+            <li><strong>A/B Testing:</strong> Conducting experiments to determine the effectiveness of different strategies.</li>
+            <li><strong>Data Mining:</strong> Extracting valuable information from large datasets.</li>
+            <li><strong>Business Intelligence Solutions:</strong> Implementing tools and systems for real-time data analysis.</li>
+        </ul>
+
+    </div>
+
+    <div id="financial-planning" class="tab-content">
+        <h2>Financial Planning</h2>
+        <p>Our financial planning services are designed to help individuals and businesses achieve their financial goals. We offer comprehensive solutions that include:</p>
+
+        <ul>
+            <li><strong>BUDGETING:</strong> Creating detailed budgets to manage expenses effectively.</li>
+            <li><strong>CASH FLOW MANAGEMENT:</strong> Analyzing cash flow patterns to ensure liquidity.</li>
+            <li><strong>SAVINGS STRATEGIES:</strong> Developing plans to maximize savings and investments.</li>
+            <li><strong>TAX PLANNING:</strong> Providing strategies to minimize tax liabilities legally.</li>
+            <li><strong>PENSION AND RETIREMENT PLANNING:</strong> Helping clients prepare for a secure retirement.</li>
+          	<li><strong>DIVERSIFICATION OF INVESTMENTS:</strong> Advising on portfolio diversification to mitigate risks.</li>
+
+		</ul>
+
+    </div>
+
+    <div id="direct-tax" class="tab-content">
+        <h2>Direct Tax Services</h2>
+      	<p>Your tax obligations can be complex, but our direct tax services simplify the process. We provide expert guidance in the following areas:</p>
+
+      	<ul>
+
+        	<li><strong>TAX COMPLIANCE:</strong> Ensuring adherence to local tax laws and regulations.</li>
+
+        	<li><strong>TAX PLANNING AND STRATEGY DEVELOPMENT:</strong> Crafting strategies to minimize tax liabilities while maximizing benefits.</li>
+
+        	<li><strong>TAX RETURNS PREPARATION:</strong> Preparing accurate tax returns for individuals and businesses.</li>
+
+        	<li><strong>AUDIT SUPPORT AND REPRESENTATION:</strong> Assisting clients during tax audits and providing representation before tax authorities.</li>
+
+        	<li><strong>CROSS-BORDER TAXATION ADVICE:</strong> Offering guidance on international tax matters for businesses operating globally.</li>
+
+        	<li><strong>TAX RISK ASSESSMENT:</strong> Identifying potential tax risks and recommending mitigation strategies.</li>
+
+      	</ul>
+
+    </div>
+
+    <div id="resources" class="tab-content">
+      	<h2>Resources</h2>
+
+      	<p>Check out these YouTube links for Business Analysis Courses:</p>
+
+      	<ul>
+
+        	<li><a href="https://www.youtube.com/watch?v=example1" style="color:white;">Business Analysis Fundamentals</a></li>
+
+        	<li><a href="https://www.youtube.com/watch?v=example2" style="color:white;">Advanced Data Analysis Techniques</a></li>
+
+        	<li><a href="https://www.youtube.com/watch?v=example3" style="color:white;">Financial Planning Best Practices</a></li>
+
+      	</ul>
+
+    </div>
+
+    <div id="contacts" class="tab-content">
+      	<h2>Contact Us</h2>
+
+      	<p>Email: XYZ@abc.com</p>
+
+      	<p>Mobile No: 12345</p>
+
+  	</div>
+
+</div>
+
+<script>
+  	function showTab(tabId) {
+      	const tabs = document.querySelectorAll('.tab-content');
+      	tabs.forEach(tab => {
+          	tab.classList.remove('active');
+      	});
+      	document.getElementById(tabId).classList.add('active');
+  	}
+</script>
+
+</body>
+</html>
